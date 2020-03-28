@@ -1,0 +1,19 @@
+{
+    "name": "tim168\/ip",
+    "description": "A IP SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TIM168",
+            "email": "784699571@qq.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tim168\\Ip\\": "src"
+        }
+    }
+}
