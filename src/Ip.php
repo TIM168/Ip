@@ -1,31 +1,56 @@
 <?php
-
+/**
+ * by tim168 <784699571@qq.com>
+ * github:https://github.com/TIM168
+ */
 namespace Tim168\Ip;
 
 use GuzzleHttp\Client;
 use Tim168\Ip\Exceptions\HttpException;
 use Tim168\Ip\Exceptions\InvalidArgumentException;
 
+/**
+ * Class Ip
+ * @package Tim168\Ip
+ */
 class Ip
 {
     protected $lang;
     protected $guzzleOptions = [];
 
+    /**
+     * Ip constructor.
+     * @param string $lang
+     */
     public function __construct($lang = '')
     {
         $this->lang = $lang;
     }
 
+    /**
+     * @return Client
+     */
     public function getHttpClient()
     {
         return new Client($this->guzzleOptions);
     }
 
+    /**
+     * @param array $options
+     */
     public function setGuzzleOptions(array $options)
     {
         $this->guzzleOptions = $options;
     }
 
+    /**
+     * @param string $type
+     * @param string $ip
+     * @param int $timeout
+     * @return string
+     * @throws HttpException
+     * @throws InvalidArgumentException
+     */
     public function getIp($type = 'json', $ip = '', $timeout = 10)
     {
         $url = 'http://ip-api.com/' . $type . '/' . $ip;
@@ -52,6 +77,10 @@ class Ip
 
     }
 
+    /**
+     * @param $ip
+     * @throws InvalidArgumentException
+     */
     public function checkIp($ip)
     {
         if (!empty($ip)) {
@@ -61,6 +90,10 @@ class Ip
         }
     }
 
+    /**
+     * @param $ip
+     * @throws InvalidArgumentException
+     */
     public function checkIpV4($ip)
     {
         if (!empty($ip)) {
@@ -70,6 +103,10 @@ class Ip
         }
     }
 
+    /**
+     * @param $ip
+     * @throws InvalidArgumentException
+     */
     public function checkIpV6($ip)
     {
         if (!empty($ip)) {
@@ -79,6 +116,11 @@ class Ip
         }
     }
 
+    /**
+     * @param $ip
+     * @return string
+     * @throws InvalidArgumentException
+     */
     public function IpV4toV6($ip)
     {
         $this->checkIpV4($ip);
@@ -96,6 +138,11 @@ class Ip
         return $IpV6;
     }
 
+    /**
+     * @param $ip
+     * @return string
+     * @throws InvalidArgumentException
+     */
     public function IpV6toV4($ip)
     {
         $this->checkIpV6($ip);
