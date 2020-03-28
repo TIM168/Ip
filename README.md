@@ -2,6 +2,7 @@
 
 <p align="left"> 根据IpV4、IpV6地址获取定位信息的PHP组件</p>
 
+[![Build Status](https://travis-ci.org/TIM168/Ip.svg?branch=master)](https://travis-ci.org/TIM168/Ip)
 
 ## 安装
 
