@@ -1,7 +1,7 @@
 <?php
 /**
  * by tim168 <784699571@qq.com>
- * github:https://github.com/TIM168
+ * github https://github.com/TIM168
  */
 namespace Tim168\Ip;
 
