@@ -6,7 +6,7 @@
 ## 安装
 
 ```shell
-$ composer require tim168/ip -vvv
+$ composer require tim168/ip
 ```
 
 ## 使用
