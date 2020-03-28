@@ -1,9 +1,9 @@
-<h1 align="left"> Ip </h1>
+<h1 align="center"> Ip </h1>
 
-<p align="left"> 根据IpV4、IpV6地址获取定位信息的PHP组件</p>
+<p align="center"> 根据IpV4、IpV6地址获取定位信息的PHP组件</p>
 
 [![Build Status](https://travis-ci.org/TIM168/Ip.svg?branch=master)](https://travis-ci.org/TIM168/Ip)
-
+<a href="https://packagist.org/packages/tim168/ip"><img src="https://poser.pugx.org/tim168/ip/license" alt="License"></a>
 ## 安装
 
 ```shell
