@@ -3,7 +3,9 @@
 <p align="center"> 根据IpV4、IpV6地址获取定位信息的PHP组件</p>
 
 [![Build Status](https://travis-ci.org/TIM168/Ip.svg?branch=master)](https://travis-ci.org/TIM168/Ip)
+<a href="https://packagist.org/packages/tim168/ip"><img src="https://poser.pugx.org/tim168/ip/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/tim168/ip"><img src="https://poser.pugx.org/tim168/ip/license" alt="License"></a>
+<a href="https://packagist.org/packages/tim168/ip"><img src="https://poser.pugx.org/tim168/ip/downloads" alt="Total Downloads"></a>
 ## 安装
 
 ```shell
