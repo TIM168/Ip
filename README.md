@@ -3,9 +3,11 @@
 <p align="center"> 根据IpV4、IpV6地址获取定位信息的PHP组件</p>
 
 [![Build Status](https://travis-ci.org/TIM168/Ip.svg?branch=master)](https://travis-ci.org/TIM168/Ip)
-<a href="https://packagist.org/packages/tim168/ip"><img src="https://poser.pugx.org/tim168/ip/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/tim168/ip"><img src="https://poser.pugx.org/tim168/ip/license" alt="License"></a>
-<a href="https://packagist.org/packages/tim168/ip"><img src="https://poser.pugx.org/tim168/ip/downloads" alt="Total Downloads"></a>
+[![Latest Stable Version](https://poser.pugx.org/tim168/ip/v/stable)](https://packagist.org/packages/tim168/ip)
+[![License](https://poser.pugx.org/tim168/ip/license)](https://packagist.org/packages/tim168/ip)
+[![Latest Unstable Version](https://poser.pugx.org/tim168/ip/v/unstable)](https://packagist.org/packages/tim168/ip)
+[![Total Downloads](https://poser.pugx.org/tim168/ip/downloads)](https://packagist.org/packages/tim168/ip)
+[![composer.lock](https://poser.pugx.org/tim168/ip/composerlock)](https://packagist.org/packages/tim168/ip)
 
 README: [中文](https://github.com/TIM168/Ip/blob/master/README.md "中文")/[English](https://github.com/TIM168/Ip/blob/master/README-en.md "English")
 
