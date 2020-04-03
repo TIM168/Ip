@@ -18,6 +18,8 @@ $ composer require tim168/ip
 ```
 
 ## 使用
+    require __DIR__ .'/vendor/autoload.php';
+
     use Tim168\Ip\Ip;
 	
     $ip = new Ip('zh-CN');  //支持以下语言
