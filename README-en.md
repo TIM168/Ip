@@ -22,7 +22,6 @@ $ composer require tim168/ip
 
     use Tim168\Ip\Ip;
 	
-    $ip = new Ip('zh-CN');  //Support the following languages
 ## Supported language formats
 |  character| describe  |
 | :------------ | :------------ |
@@ -35,7 +34,7 @@ $ composer require tim168/ip
 | zh-CN  | chinese  |
 | ru  | russian  |
 ## Get Ip location information
-    $res = $ip->get('json','116.234.222.36')
+    $res = Ip::getIp('json','116.234.222.36')
 	
 ## Example
 	{
@@ -55,7 +54,7 @@ $ composer require tim168/ip
         "query": "116.234.222.36"
     }
 ## Get Xml Format
-    $res = $ip->get('xml','116.234.222.36')
+    $res = Ip::getIp('xml','116.234.222.36')
 ## Example
     <?xml version="1.0" encoding="UTF-8"?>
     <query>
@@ -75,7 +74,7 @@ $ composer require tim168/ip
     	<query>116.234.222.36</query>
     </query>
 ## GET Csv Format
-    $res = $ip->get('csv','116.234.222.36')
+    $res = Ip::getIp('csv','116.234.222.36')
 ## Example
 	success,China,CN,SH,Shanghai,Shanghai,,31.0449,121.4012,Asia/Shanghai,China Telecom (Group),Chinanet SH,AS4812 China
     Telecom (Group),116.234.222.36
@@ -86,13 +85,13 @@ $ composer require tim168/ip
     Telecom (Group)";s:3:"org";s:11:"Chinanet SH";s:2:"as";s:28:"AS4812 China Telecom
     (Group)";s:5:"query";s:14:"116.234.222.36";}
 ## IpV4 to IpV6
-	$res = $ip->IpV4toV6('116.234.222.36')
+	$res = Ip::IpV4toV6('116.234.222.36')
 	
 ## Example
 	0000:0000:0000:0000:0000:ffff:74ea:de24
 
 ## IpV6 to IpV4
-	$res = $ip->IpV6toV4('0000:0000:0000:0000:0000:ffff:74ea:de24')
+	$res = Ip::IpV6toV4('0000:0000:0000:0000:0000:ffff:74ea:de24')
 	
 ## Example
 	116.234.222.36

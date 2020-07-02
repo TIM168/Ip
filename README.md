@@ -23,7 +23,6 @@ $ composer require tim168/ip
 
     use Tim168\Ip\Ip;
 	
-    $ip = new Ip('zh-CN');  //支持以下语言
 ## 支持的语言格式
 |  字符集| 描述  |
 | :------------ | :------------ |
@@ -36,7 +35,7 @@ $ composer require tim168/ip
 | zh-CN  | 中文  |
 | ru  | 俄语  |
 ## 获取Ip定位信息
-    $res = $ip->get('json','116.234.222.36')
+    $res = Ip::getIp('json','116.234.222.36')
 	
 ## 示例
 	{
@@ -56,7 +55,7 @@ $ composer require tim168/ip
     	"query": "116.234.222.36" //ip
 	}
 ## 获取XML格式
-    $res = $ip->get('xml','116.234.222.36')
+    $res = Ip::getIp('xml','116.234.222.36')
 ## 示例
     <?xml version="1.0" encoding="UTF-8"?>
     <query>
@@ -76,24 +75,24 @@ $ composer require tim168/ip
     	<query>116.234.222.36</query>
     </query>
 ## 获取CSV格式
-    $res = $ip->get('csv','116.234.222.36')
+    $res = Ip::getIp('csv','116.234.222.36')
 ## 示例
 	success,中国,CN,SH,上海,上海,,31.0449,121.4012,Asia/Shanghai,China Telecom (Group),Chinanet SH,AS4812 China Telecom
     (Group),116.234.222.36
 ## 获取序列化格式
-    $res = $ip->get('php','116.234.222.36')
+    $res = Ip::getIp('php','116.234.222.36')
 ## 示例
     a:14:{s:6:"status";s:7:"success";s:7:"country";s:6:"中国";s:11:"countryCode";s:2:"CN";s:6:"region";s:2:"SH";s:10:"regionName";s:6:"上海";s:4:"city";s:6:"上海";s:3:"zip";s:0:"";s:3:"lat";d:31.0449;s:3:"lon";d:121.4012;s:8:"timezone";s:13:"Asia/Shanghai";s:3:"isp";s:21:"China
     Telecom (Group)";s:3:"org";s:11:"Chinanet SH";s:2:"as";s:28:"AS4812 China Telecom
     (Group)";s:5:"query";s:14:"116.234.222.36";}
 ## IpV4转换成IpV6
-	$res = $ip->IpV4toV6('116.234.222.36')
+	$res = Ip::IpV4toV6('116.234.222.36')
 	
 ## 示例
 	0000:0000:0000:0000:0000:ffff:74ea:de24
 
 ## IpV6转换成IpV4
-	$res = $ip->IpV6toV4('0000:0000:0000:0000:0000:ffff:74ea:de24')
+	$res = Ip::IpV6toV4('0000:0000:0000:0000:0000:ffff:74ea:de24')
 	
 ## 示例
 	116.234.222.36

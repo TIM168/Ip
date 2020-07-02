@@ -75,7 +75,7 @@ class Ip
      * @param $ip
      * @throws InvalidArgumentException
      */
-    public function checkIpV4($ip)
+    public static function checkIpV4($ip)
     {
         if (!empty($ip)) {
             if (!filter_var($ip, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV4)) {
@@ -88,7 +88,7 @@ class Ip
      * @param $ip
      * @throws InvalidArgumentException
      */
-    public function checkIpV6($ip)
+    public static function checkIpV6($ip)
     {
         if (!empty($ip)) {
             if (!filter_var($ip, \FILTER_VALIDATE_IP, \FILTER_FLAG_IPV6)) {
@@ -102,9 +102,9 @@ class Ip
      * @return string
      * @throws InvalidArgumentException
      */
-    public function IpV4toV6($ip)
+    public static function IpV4toV6($ip)
     {
-        $this->checkIpV4($ip);
+        self::checkIpV4($ip);
         $set = '0000:0000:0000:0000:0000:ffff:';
         $arr = explode('.', $ip);
         $new = [];
@@ -124,9 +124,9 @@ class Ip
      * @return string
      * @throws InvalidArgumentException
      */
-    public function IpV6toV4($ip)
+    public static function IpV6toV4($ip)
     {
-        $this->checkIpV6($ip);
+        self::checkIpV6($ip);
         $str = mb_substr($ip, 30, 38);
         $arr = explode(':', $str);
         $Ip1 = base_convert(mb_substr($arr[0], 0, 2), 16, 10);
