@@ -15,43 +15,24 @@ use Tim168\Ip\Exceptions\InvalidArgumentException;
  */
 class Ip
 {
-    protected $lang;
-    protected $guzzleOptions = [];
-
-    /**
-     * Ip constructor.
-     * @param string $lang
-     */
-    public function __construct($lang = '')
-    {
-        $this->lang = $lang;
-    }
-
     /**
      * @return Client
      */
-    public function getHttpClient()
+    public static function getHttpClient()
     {
-        return new Client($this->guzzleOptions);
-    }
-
-    /**
-     * @param array $options
-     */
-    public function setGuzzleOptions(array $options)
-    {
-        $this->guzzleOptions = $options;
+        return new Client();
     }
 
     /**
      * @param string $type
      * @param string $ip
      * @param int $timeout
+     * @param string $lang
      * @return string
      * @throws HttpException
      * @throws InvalidArgumentException
      */
-    public function getIp($type = 'json', $ip = '', $timeout = 10)
+    public static function getIp($type = 'json', $ip = '', $timeout = 10,$lang = '')
     {
         $url = 'http://ip-api.com/' . $type . '/' . $ip;
 
@@ -59,14 +40,14 @@ class Ip
             throw new InvalidArgumentException('Invalid response type:' . $type);
         }
 
-        $this->checkIp($ip);
+        self::checkIp($ip);
 
         $query = array_filter([
-            'lang' => $this->lang ? $this->lang : 'zh-CN'
+            'lang' => $lang ? $lang : 'zh-CN'
         ]);
 
         try {
-            $response = $this->getHttpClient()->get($url, [
+            $response = self::getHttpClient()->get($url, [
                 'query' => $query, 'timeout' => $timeout,
             ])->getBody()->getContents();
 
@@ -81,7 +62,7 @@ class Ip
      * @param $ip
      * @throws InvalidArgumentException
      */
-    public function checkIp($ip)
+    public static function checkIp($ip)
     {
         if (!empty($ip)) {
             if (!filter_var($ip, \FILTER_VALIDATE_IP)) {
