@@ -8,6 +8,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/tim168/ip/v/unstable)](https://packagist.org/packages/tim168/ip)
 [![Total Downloads](https://poser.pugx.org/tim168/ip/downloads)](https://packagist.org/packages/tim168/ip)
 [![composer.lock](https://poser.pugx.org/tim168/ip/composerlock)](https://packagist.org/packages/tim168/ip)
+<a href="https://www.php.net/"><img src="https://img.shields.io/badge/php-%3E%3D5.6-blue"></a>
 
 README: [中文](https://github.com/TIM168/Ip/blob/master/README.md "中文")/[English](https://github.com/TIM168/Ip/blob/master/README-en.md "English")
 
@@ -18,6 +19,8 @@ $ composer require tim168/ip
 ```
 
 ## 使用
+    require __DIR__ .'/vendor/autoload.php';
+
     use Tim168\Ip\Ip;
 	
     $ip = new Ip('zh-CN');  //支持以下语言
